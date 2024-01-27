@@ -14,7 +14,25 @@ let infoGroup = [];
 
 for (let i = 0; i < array.length; i++){
 
-    infoGroup.push(array[i].split(","));
+  infoGroup.push(array[i].split(","));
     
 }
 console.log(infoGroup);
+
+//Part Three
+
+let infoGroups = infoGroup.slice(1);
+
+const finalInfo = infoGroup.map(row => {
+        return {
+          id: row[0],
+          name: row[1],
+          occupation: row[2],
+          age: row[3]
+        };
+      });
+
+    console.log(infoGroups);
+
+
+
